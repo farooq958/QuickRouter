@@ -17,6 +17,7 @@ context.to(const SecondScreen())
 will navigate to the second screen using the default fade transition.
 
 
+
 ### context.back(result):
  This method pops the current route from the Navigator and returns an optional result. The result can be of any type and it will be passed to the previous route.
 
@@ -25,6 +26,7 @@ will navigate to the second screen using the default fade transition.
   context.back('Hello from second')
   ```
 will return to the previous screen with the string result.
+
 
 
 ### context.pushReplacement(child, result) : 
@@ -37,6 +39,7 @@ context.pushReplacement(const ThirdScreen(), result: 'Hello from home')
  will replace the current screen with the third screen and pass the string result to the home screen.
 
 
+
 #### context.pushAndRemoveUntil(child, predicate):
  This method pushes a new route to the ```Navigator``` with the given child widget and transition type, and removes all the previous routes until the predicate is satisfied. The predicate is a function that takes a route as an argument and returns a boolean value.
   For example: 
@@ -44,6 +47,7 @@ context.pushReplacement(const ThirdScreen(), result: 'Hello from home')
    context.pushAndRemoveUntil(const FourthScreen(), (route) => route.isFirst)
   ```
 will remove all the routes except the first one and navigate to the fourth screen.
+
 
 
 ### context.restorablePushAndRemoveUntil(newRouteBuilder, predicate, arguments): 
@@ -56,6 +60,7 @@ For example:
  will remove all the routes and navigate to the fifth screen with restoration and arguments.
 
 
+
 ### context.replace(old, to): 
 This method replaces the current route with a new one with the given child widget and transition type. It also preserves the type parameter of the current route.
  For example: 
@@ -63,6 +68,7 @@ This method replaces the current route with a new one with the given child widge
  context.replace(old: this, to: const ThirdScreen())
  ```
   will replace the current screen with the third screen and keep the same result type.
+
 
 
 ### context.restorableReplace(old, to, arguments):
@@ -76,6 +82,7 @@ This method replaces the current route with a new one with the given child widge
   will replace the current screen with the fifth screen with restoration and arguments and keep the same result type.
 
 
+
 ### context.replaceRouteBelow(anchor, to): 
 This method replaces the route below the current one with a new one with the given child widget and transition type. It also preserves the type parameter of the route below the current one.
  For example:
@@ -83,6 +90,7 @@ This method replaces the route below the current one with a new one with the giv
  context.replaceRouteBelow(anchor: this, to: const FourthScreen())
 ```
   will replace the route below the current one with the fourth screen and keep the same result type.
+
 
 # Usage
 
