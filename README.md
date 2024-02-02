@@ -20,7 +20,8 @@ will navigate to the second screen using the default fade transition.
 ### context.back(result):
  This method pops the current route from the Navigator and returns an optional result. The result can be of any type and it will be passed to the previous route.
 
-  For example: ```dart
+  For example:
+  ```dart
   context.back('Hello from second')
   ```
 will return to the previous screen with the string result.
@@ -40,7 +41,7 @@ context.pushReplacement(const ThirdScreen(), result: 'Hello from home')
  This method pushes a new route to the ```Navigator``` with the given child widget and transition type, and removes all the previous routes until the predicate is satisfied. The predicate is a function that takes a route as an argument and returns a boolean value.
   For example: 
   ```dart
-  dart context.pushAndRemoveUntil(const FourthScreen(), (route) => route.isFirst)
+   context.pushAndRemoveUntil(const FourthScreen(), (route) => route.isFirst)
   ```
 will remove all the routes except the first one and navigate to the fourth screen.
 
