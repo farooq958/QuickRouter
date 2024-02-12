@@ -1,7 +1,11 @@
 name: quick_router
-description: "A new Flutter project."
+description: "The QuickRouter provides handy methods for navigating between routes using the Navigator widget in Flutter. It supports both regular and restorable routes and offers various transition types."
 version: 0.0.1
-homepage:
+homepage: https://github.com/Mehrankhan-METRA-RGB/QuickRouter
+repository: https://github.com/Mehrankhan-METRA-RGB/QuickRouter
+issue_tracker: https://github.com/Mehrankhan-METRA-RGB/QuickRouter/issues
+documentation: https://flutter.metra.dev
+license: MIT
 
 environment:
   sdk: '>=3.2.4 <4.0.0'

@@ -1,7 +1,7 @@
 
 
 ## Features
-The `QuickRouter` extension provides handy methods for navigating between routes using the `Navigator` widget in Flutter. It supports both regular and restorable routes and offers various transition types.
+The `QuickRouter`  provides handy methods for navigating between routes using the `Navigator` widget in Flutter. It supports both regular and restorable routes and offers various transition types.
 
 ## Getting started
 
@@ -78,16 +78,23 @@ will replace the route below the current one with the fourth screen and keep the
 
 # Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+[//]: # ()
+[//]: # (TODO: Include short and useful examples for package users. Add longer examples)
 
-```dart
-const like = 'sample';
-```
+[//]: # (to `/example` folder.)
+
+[//]: # ()
+[//]: # (```dart)
+
+[//]: # (const like = 'sample';)
+
+[//]: # (```)
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+[//]: # (TODO: Tell users more about the package: where to find more information, how to)
+
+[//]: # (contribute to the package, how to file issues, what response they can expect)
+
+[//]: # (from the package authors, and more.)
 

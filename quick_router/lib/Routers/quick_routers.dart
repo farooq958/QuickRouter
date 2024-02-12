@@ -16,7 +16,8 @@ extension QuickRouter on BuildContext {
     return Navigator.of(this).push(_transit(child, transitions));
   }
 
-  /// A method that pops the current route from the Navigator and returns an optional result.
+  /// A method that pops the current route and returns an optional result to the
+  /// previous route.
   void back<T extends Object?>([T? result]) {
     Navigator.of(this).pop<T>(result);
   }
@@ -125,12 +126,6 @@ extension QuickRouter on BuildContext {
   /// returns an optional result to the previous route.
   Future<bool> maybePop<T extends Object?>([T? result]) {
     return Navigator.of(this).maybePop<T>(result);
-  }
-
-  /// A method that pops the current route and returns an optional result to the
-  /// previous route.
-  void pop<T extends Object?>([T? result]) {
-    Navigator.of(this).pop<T>(result);
   }
 
   /// A method that pops all the routes until the predicate is satisfied.

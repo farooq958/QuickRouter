@@ -156,7 +156,8 @@ class ThirdScreen extends StatelessWidget {
             // A button that returns to the previous screen using the back() method
             ElevatedButton(
               onPressed: () {
-                context.back('Hello from third');
+                context.to(const HomeScreen(),
+                    transitions: QuickTransition.Size);
               },
               child: const Text('Go back with result'),
             ),
