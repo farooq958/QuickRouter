@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 import 'package:flutter/material.dart';
-import 'package:quick_router/Routers/quick_router_transitions.dart';
+import 'package:flutter_quick_router/Routers/quick_router_transitions.dart';
 
 /// An extension that provides some handy methods for navigating between routes
 /// using the Navigator widget. It supports both regular and restorable routes,

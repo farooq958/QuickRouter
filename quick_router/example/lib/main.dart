@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quick_router/quick_router.dart';
+import 'package:flutter_quick_router/quick_router.dart';
 
 void main() {
   runApp(const MyApp());
