@@ -55,7 +55,11 @@ This method pushes a new restorable route to the Navigator with the given route 
 
 For example:
  ```dart
- context.restorablePushAndRemoveUntil((context, arguments) => MaterialPageRoute(builder: (context) => const FifthScreen(), settings: const RouteSettings(name: '/fifth')), (route) => false, arguments: 'Some arguments')
+ context.restorablePushAndRemoveUntil((context, arguments)
+=> MaterialPageRoute(builder: (context)
+ => const FifthScreen(),
+ settings: const RouteSettings(name: '/fifth')),
+ (route) => false, arguments: 'Some arguments')
  ```
  will remove all the routes and navigate to the fifth screen with restoration and arguments.
 
