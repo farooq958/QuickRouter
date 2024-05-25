@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quick_router/quick_router.dart';
 
+QuickTransition defaultTransition = QuickFade();
+
+// QuickSlide(
+//   animate: CurveTween(curve: Curves.fastEaseInToSlowEaseOut),
+//   // transitionDuration: const Duration(seconds: 2),
+//   // reverseTransitionDuration: const Duration(seconds: 2)
+// );
+
 void main() {
   runApp(const MyApp());
 }
@@ -36,7 +44,15 @@ class HomeScreen extends StatelessWidget {
             // A button that navigates to the second screen using the to() method
             ElevatedButton(
               onPressed: () {
-                context.to(const SecondScreen());
+                context.to(const SecondScreen(),
+                    transitions: defaultTransition);
+
+                ///ROTATION ANIMATION TRANSITION
+                //const QuickRotate(
+                //                         start: 0,
+                //                         end: 1,
+                //                         alignment: Alignment.center,
+                //                         filterQuality: FilterQuality.low)
               },
               child: const Text('Go to second screen'),
             ),
@@ -44,7 +60,7 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 context.pushReplacement(const ThirdScreen(),
-                    result: 'Hello from home');
+                    transitions: defaultTransition, result: 'Hello from home');
               },
               child: const Text('Replace with third screen'),
             ),
@@ -53,6 +69,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 context.pushAndRemoveUntil(
                   const FourthScreen(),
+                  transitions: defaultTransition,
                   (route) => route.isFirst,
                 );
               },
@@ -65,10 +82,9 @@ class HomeScreen extends StatelessWidget {
                 context.restorablePushAndRemoveUntil(
                   (context, arguments) => MaterialPageRoute(
                     builder: (context) => const FifthScreen(),
-                    settings: const RouteSettings(name: '/fifth'),
                   ),
                   (route) => false,
-                  arguments: 'Some arguments',
+                  arguments: <String, String>{"key": 'Some arguments'},
                 );
               },
               child: const Text(
@@ -104,9 +120,9 @@ class SecondScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 context.replace(
-                  old: this,
-                  to: const ThirdScreen(),
-                );
+                    old: this,
+                    to: const ThirdScreen(),
+                    transitions: defaultTransition);
               },
               child: const Text('Replace with third screen'),
             ),
@@ -125,6 +141,7 @@ class SecondScreen extends StatelessWidget {
               onPressed: () {
                 context.restorableReplace(
                   old: this,
+                  transitions: defaultTransition,
                   to: (context, arguments) => MaterialPageRoute(
                     builder: (context) => const FifthScreen(),
                     settings: const RouteSettings(name: '/fifth'),
@@ -156,8 +173,7 @@ class ThirdScreen extends StatelessWidget {
             // A button that returns to the previous screen using the back() method
             ElevatedButton(
               onPressed: () {
-                context.to(const HomeScreen(),
-                    transitions: QuickTransition.Size);
+                context.to(const HomeScreen(), transitions: defaultTransition);
               },
               child: const Text('Go back with result'),
             ),
