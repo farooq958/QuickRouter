@@ -6,3 +6,8 @@
 ## 0.0.2
 
 * TODO: Documentation Page updated.
+
+
+## 0.0.3
+
+* TODO: Added new QuickTransition class that uses Flutter animations smoothly and easily
