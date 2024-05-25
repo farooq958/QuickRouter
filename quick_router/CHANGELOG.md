@@ -10,4 +10,4 @@
 
 ## 0.0.3
 
-* TODO: Added new QuickTransition class that uses Flutter animations smoothly and easily
+* TODO: Added  new QuickTransition class that uses Flutter animations smoothly and easily
